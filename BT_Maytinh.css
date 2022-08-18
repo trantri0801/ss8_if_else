@@ -1,0 +1,17 @@
+button
+{
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+    color: blue;
+}
+#hienthi{
+    height: 50px;
+    width: 240px;
+}
+table{
+    border: 5px solid #000000;
+}
+input{
+    font-size: 30px;
+}

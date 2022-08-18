@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT_Switch_case</title>
+</head>
+<body>
+    <input type="text" size="15" id="nhapthang">
+    <input type="button" onclick="kq()" value="Tính số ngày"><br>
+    <div id="raketqua"></div>
+</body>
+<script>
+   function kq() {
+       let thang = document.getElementById("nhapthang").value;
+       let month = parseInt(thang);
+       if (month < 1 || month > 12) {
+           alert("Tháng chỉ nằm từ tháng 1 đến tháng 12");
+       }
+       if (document.getElementById("nhapthang").value == "") {
+           alert("Không được để trống");
+       }
+       switch (month) {
+           case 1:
+               document.getElementById("raketqua").innerHTML = "Tháng 1 có 31 ngày";
+               break;
+           case 2:
+               document.getElementById("raketqua").innerHTML = "Tháng 2 có 28 hoặc 29 ngày";
+               break;
+           case 3:
+               document.getElementById("raketqua").innerHTML = "Tháng 3 có 31 ngày";
+               break;
+           case 4:
+               document.getElementById("raketqua").innerHTML = "Tháng 4 có 30 ngày";
+               break;
+           case 5:
+               document.getElementById("raketqua").innerHTML = "Tháng 5 có 31 ngày";
+               break;
+           case 6:
+               document.getElementById("raketqua").innerHTML = "Tháng 6 có 30 ngày";
+               break;
+           case 7:
+               document.getElementById("raketqua").innerHTML = "Tháng 7 có 31 ngày";
+               break;
+           case 8:
+               document.getElementById("raketqua").innerHTML = "Tháng 8 có 31 ngày";
+               break;
+           case 9:
+               document.getElementById("raketqua").innerHTML = "Tháng 9 có 30 ngày";
+               break;
+           case 10:
+               document.getElementById("raketqua").innerHTML = "Tháng 10 có 31 ngày";
+               break;
+           case 11:
+               document.getElementById("raketqua").innerHTML = "Tháng 11 có 30 ngày";
+               break;
+           case 12:
+               document.getElementById("raketqua").innerHTML = "Tháng 12 có 31 ngày";
+               break;
+       }
+   }
+</script>
+</html>

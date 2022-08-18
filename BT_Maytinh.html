@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT_Maytinh</title>
+    <link rel="stylesheet" href="BT_Maytinh.css">
+</head>
+<body>
+<table>
+    <tr>
+        <td colspan="4">
+            <input type="text" placeholder="0" id="hienthi" style="text-align: right">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="show('1')">1</button>
+        </td>
+        <td>
+            <button onclick="show('2')">2</button>
+        </td>
+        <td>
+            <button onclick="show('3')">3</button>
+        </td>
+        <td>
+            <button onclick="show('+')">+</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="show('4')">4</button>
+        </td>
+        <td>
+            <button onclick="show('5')">5</button>
+        </td>
+        <td>
+            <button onclick="show('6')">6</button>
+        </td>
+        <td>
+            <button onclick="show('-')">-</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="show('7')">7</button>
+        </td>
+        <td>
+            <button onclick="show('8')">8</button>
+        </td>
+        <td>
+            <button onclick="show('9')">9</button>
+        </td>
+        <td>
+            <button onclick="show('*')">*</button>
+        </td>
+    <tr>
+        <td>
+            <button onclick="Clear('')">C</button>
+        </td>
+        <td>
+            <button onclick="show('0')">0</button>
+        </td>
+        <td>
+            <button onclick="calculate('')" class="equal">=</button>
+        </td>
+        <td>
+            <button onclick="show('/')">/</button>
+        </td>
+    </tr>
+    </tr>
+</table>
+</body>
+<script>
+    let manhinh = document.getElementById("hienthi");
+    // for output
+    function show(num){
+        manhinh.value += num;
+    }
+    function calculate(){
+        try{
+            manhinh.value = eval(manhinh.value);
+        }
+        catch(err){
+            alert("Hãy nhập biểu thức đúng")
+        }
+    }
+    function Clear(){
+        manhinh.value = "";
+    }
+</script>
+</html>
